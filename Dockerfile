@@ -13,7 +13,7 @@ COPY . /go/src/app
 #RUN go-wrapper install
 
 RUN go get -d -v
-RNU go install -v
+RUN go install -v
 
 # 设置 PORT 环境变量
 ENV PORT 8080
