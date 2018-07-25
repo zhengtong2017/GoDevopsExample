@@ -9,8 +9,11 @@ WORKDIR /go/src/app
 COPY . /go/src/app
 
 # 下载并安装第三方依赖到容器中
-RUN go-wrapper download
-RUN go-wrapper install
+#RUN go-wrapper download
+#RUN go-wrapper install
+
+RUN go get -d -v
+RNU go install -v
 
 # 设置 PORT 环境变量
 ENV PORT 8080
